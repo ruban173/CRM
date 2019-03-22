@@ -31,7 +31,7 @@ $tableBody='<thead>
                 </th>
               </tr>
                 </thead>';
-$th=Html::tag('th', '', ['class' => $this->classHeadTh]);
+$th=Html::tag('td', '', ['class' => $this->classHeadTh]);
 for($i=0;$i<8;$i++){
  //$th.=Html::tag('th', 'Hello!!!!!', ['class' => $this->classHeadTh]);
 }
@@ -59,7 +59,7 @@ $tr=Html::tag('tr', $th, ['class' => $this->classHeadTr]);
   foreach (\app\models\Students::find()->each() as $student) {
   	 $th=Html::tag('th', $student->first_name .' ' .$student->last_name , ['class' => '']);
   	foreach($daterange as $date){
-	 $th.=Html::tag('th',  '', ['class' => '']);
+	 $th.=Html::tag('td',  '', ['class' => '']);
    
 }
    $tableHead.=Html::tag('tr',$th , ['class' => '']);
